@@ -1,1 +1,18 @@
-/.metadata/
+# IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+Servers/
+
+# OSX
+.DS_Store
+
+# Scripts
+*.sh
