@@ -7,6 +7,8 @@ To download Tomcat, click [here](https://tomcat.apache.org/download-80.cgi)
 
 ## Pre-requisites
 ### Configuring Dependencies (PROJECT BUILD PATH)
+Open `StrutsLogin` as a PROJECT
+
 (Steps written for eclipse)
 1. Add *JAR* files to the build path configuration. The JAR files needed are located in `WebContent/WEB-INF/lib/`
 ```
