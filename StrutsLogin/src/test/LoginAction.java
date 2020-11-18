@@ -33,7 +33,8 @@ public class LoginAction extends ActionSupport{
 	    if(this.validate(uname, password)){  
 	        return "SUCCESS";  
 	    }  
-	    else{  
+	    else{
+	    	addActionError("Error: Incorrect username or password, please try again.");
 	        return "ERROR";  
 	    }  
 	}  
@@ -45,8 +46,7 @@ public class LoginAction extends ActionSupport{
 
 	      try {
 	    	 Class.forName("com.mysql.jdbc.Driver");
-	  	  	 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/struts2database?serverTimezone=UTC", "root", "root");
-	  	  	
+	  	  	 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/struts2database?allowPublicKeyRetrieval=true&useSSL=false", "root", "rootroot");
 	         String sql = "SELECT * FROM logincredentials WHERE userID = ? AND passwordID = ?";
 	         PreparedStatement ps = conn.prepareStatement(sql);
 	         ps.setString(1, uname);

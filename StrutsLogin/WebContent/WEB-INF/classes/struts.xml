@@ -8,7 +8,7 @@
 	<package name="a" extends="struts-default" namespace="/">
 		<action name="verify" class="test.LoginAction">
 			<result name="SUCCESS">/success.jsp</result>
-			<result name="ERROR">/error.jsp </result>
+			<result name="ERROR">/index.jsp </result>
 		</action>
 	</package>
 </struts>
