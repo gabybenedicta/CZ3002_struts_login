@@ -41,20 +41,11 @@ public class LoginAction extends ActionSupport{
 
 	public boolean validate(String uname, String password) {
 		boolean status= false;
-		
-	      Connection conn = null;
-
-	      try {
-	    	 Class.forName("com.mysql.jdbc.Driver");
-	  	  	 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/struts2database?allowPublicKeyRetrieval=true&useSSL=false", "root", "rootroot");
-	         String sql = "SELECT * FROM logincredentials WHERE userID = ? AND passwordID = ?";
-	         PreparedStatement ps = conn.prepareStatement(sql);
-	         ps.setString(1, uname);
-	         ps.setString(2, password);
-	         ResultSet rs = ps.executeQuery();
-	         status=rs.next();  
-	      }catch(Exception e){e.printStackTrace();}  
-
+		Model model = new Model();
+		User user = model.getUser(uname);
+		if(password.equals(user.getPasword())) {
+			status = true;
+		}
 		return status;
 	}
 	
