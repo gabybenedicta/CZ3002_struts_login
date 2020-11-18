@@ -5,7 +5,8 @@ Implement Login with Struts MVC Framework
 Use `Tomcat v.8.5` and define a new server
 To download Tomcat, click [here](https://tomcat.apache.org/download-80.cgi)
 
-## Configuring Dependencies (PROJECT BUILD PATH)
+## Pre-requisites
+### Configuring Dependencies (PROJECT BUILD PATH)
 (Steps written for eclipse)
 1. Add *JAR* files to the build path configuration. The JAR files needed are located in `WebContent/WEB-INF/lib/`
 ```
@@ -26,6 +27,11 @@ To download Tomcat, click [here](https://tomcat.apache.org/download-80.cgi)
 - Click on Runtime and select Apache Tomcat v8.5
 - Apply and Close
 ```
+### Setting Up the Database
+1. Download MySQL and start the MySQL server (the team uses `v8.0.xx`)
+2. Create a new database called `struts2database` with user root
+3. Modify the password of root in `LoginActivation.java` according to your root password.
+4. Check that your database is exposed on `localhost` port `3306`
 
 
 ## Running the Server
