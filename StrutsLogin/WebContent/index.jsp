@@ -2,7 +2,7 @@
 <html>
 <body> 
 	<h4>
-		Struts2 Login Example
+		CZ3002 Struts2 Login Assignment
 	</h4>
 	
 	<s:if test="hasActionErrors()">
