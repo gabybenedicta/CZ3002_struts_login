@@ -2,12 +2,6 @@ package test;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 public class LoginAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	private String uname, password;
